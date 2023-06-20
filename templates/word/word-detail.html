@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ word.word }}</h2>
+<h2>User: {{ word.User.first_name }} {{ word.User.last_name }}</h2>
+<p>{{ word.comment }}</p>
+<a href="{% url 'word_update' word.pk %}">+ Update word</a>
+<a href="{% url 'word_delete' word.pk %}">+ Delete word</a>
+
+{% endblock content %}
+
