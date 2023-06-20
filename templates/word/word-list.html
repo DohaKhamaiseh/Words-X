@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<a href="{% url 'word_create' %}">+ New Word</a>
+<ul>
+  {% for word in object_list %}
+  <li>
+    <a href="{% url 'word_detail' word.pk %}">{{ word.word }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}
